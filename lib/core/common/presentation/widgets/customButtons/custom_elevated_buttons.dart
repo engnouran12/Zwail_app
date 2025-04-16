@@ -53,35 +53,29 @@ class CustomMainButton extends StatelessWidget {
           fixedSize: Size(250.w, 60.h),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
-            side:
-                isOutlined
-                    ? BorderSide(
-                      color:
-                          borderColor ?? (enabledColor ?? AppColors.mainColor),
-                      width: 1,
-                    )
-                    : borderColor == null
+            side: isOutlined
+                ? BorderSide(
+                    color: borderColor ?? (enabledColor ?? AppColors.mainColor),
+                    width: 1,
+                  )
+                : borderColor == null
                     ? BorderSide.none
                     : BorderSide(color: borderColor!, width: 1),
           ),
-          backgroundColor:
-              isOutlined
-                  ? (enabledColor ?? Colors.white)
-                  : (enabledColor ?? AppColors.mainColor),
+          backgroundColor: isOutlined
+              ? (enabledColor ?? Colors.white)
+              : (enabledColor ?? AppColors.mainColor),
         ),
-        onPressed:
-            onPressed == null
-                ? null
-                : () {
-                  onPressed!();
-                },
-        child:
-            child ??
+        onPressed: onPressed == null
+            ? null
+            : () {
+                onPressed!();
+              },
+        child: child ??
             Text(
               text ?? '',
-              style: CustomTextStyle.styleW400S16black.copyWith(
-                color:
-                    textColor ??
+              style: CustomTextStyle.styleW400S16Black.copyWith(
+                color: textColor ??
                     (isOutlined
                         ? (enabledColor ?? AppColors.mainColor)
                         : Colors.white),

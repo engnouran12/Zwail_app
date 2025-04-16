@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-BlackItalic.eot');
+    src: local('Somar Rounded Black Italic'), local('SomarRounded-BlackItalic'),
+        url('SomarRounded-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-BlackItalic.woff2') format('woff2'),
+        url('SomarRounded-BlackItalic.woff') format('woff'),
+        url('SomarRounded-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-BoldItalic.eot');
+    src: local('Somar Rounded Bold Italic'), local('SomarRounded-BoldItalic'),
+        url('SomarRounded-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-BoldItalic.woff2') format('woff2'),
+        url('SomarRounded-BoldItalic.woff') format('woff'),
+        url('SomarRounded-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-Bold.eot');
+    src: local('Somar Rounded Bold'), local('SomarRounded-Bold'),
+        url('SomarRounded-Bold.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-Bold.woff2') format('woff2'),
+        url('SomarRounded-Bold.woff') format('woff'),
+        url('SomarRounded-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-Black.eot');
+    src: local('Somar Rounded Black'), local('SomarRounded-Black'),
+        url('SomarRounded-Black.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-Black.woff2') format('woff2'),
+        url('SomarRounded-Black.woff') format('woff'),
+        url('SomarRounded-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-ExtraBoldItalic.eot');
+    src: local('Somar Rounded ExtraBold Italic'), local('SomarRounded-ExtraBoldItalic'),
+        url('SomarRounded-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-ExtraBoldItalic.woff2') format('woff2'),
+        url('SomarRounded-ExtraBoldItalic.woff') format('woff'),
+        url('SomarRounded-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-ExtraLight.eot');
+    src: local('Somar Rounded ExtraLight'), local('SomarRounded-ExtraLight'),
+        url('SomarRounded-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-ExtraLight.woff2') format('woff2'),
+        url('SomarRounded-ExtraLight.woff') format('woff'),
+        url('SomarRounded-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-ExtraBold.eot');
+    src: local('Somar Rounded ExtraBold'), local('SomarRounded-ExtraBold'),
+        url('SomarRounded-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-ExtraBold.woff2') format('woff2'),
+        url('SomarRounded-ExtraBold.woff') format('woff'),
+        url('SomarRounded-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-RegularItalic.eot');
+    src: local('Somar Rounded Regular Italic'), local('SomarRounded-RegularItalic'),
+        url('SomarRounded-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-RegularItalic.woff2') format('woff2'),
+        url('SomarRounded-RegularItalic.woff') format('woff'),
+        url('SomarRounded-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-Thin.eot');
+    src: local('Somar Rounded Thin'), local('SomarRounded-Thin'),
+        url('SomarRounded-Thin.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-Thin.woff2') format('woff2'),
+        url('SomarRounded-Thin.woff') format('woff'),
+        url('SomarRounded-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-MediumItalic.eot');
+    src: local('Somar Rounded Medium Italic'), local('SomarRounded-MediumItalic'),
+        url('SomarRounded-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-MediumItalic.woff2') format('woff2'),
+        url('SomarRounded-MediumItalic.woff') format('woff'),
+        url('SomarRounded-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-SemiBoldItalic.eot');
+    src: local('Somar Rounded SemiBold Italic'), local('SomarRounded-SemiBoldItalic'),
+        url('SomarRounded-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-SemiBoldItalic.woff2') format('woff2'),
+        url('SomarRounded-SemiBoldItalic.woff') format('woff'),
+        url('SomarRounded-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-SemiBold.eot');
+    src: local('Somar Rounded SemiBold'), local('SomarRounded-SemiBold'),
+        url('SomarRounded-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-SemiBold.woff2') format('woff2'),
+        url('SomarRounded-SemiBold.woff') format('woff'),
+        url('SomarRounded-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-ExtraLightItalic.eot');
+    src: local('Somar Rounded ExtraLight Italic'), local('SomarRounded-ExtraLightItalic'),
+        url('SomarRounded-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-ExtraLightItalic.woff2') format('woff2'),
+        url('SomarRounded-ExtraLightItalic.woff') format('woff'),
+        url('SomarRounded-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-Medium.eot');
+    src: local('Somar Rounded Medium'), local('SomarRounded-Medium'),
+        url('SomarRounded-Medium.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-Medium.woff2') format('woff2'),
+        url('SomarRounded-Medium.woff') format('woff'),
+        url('SomarRounded-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-Regular.eot');
+    src: local('Somar Rounded Regular'), local('SomarRounded-Regular'),
+        url('SomarRounded-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-Regular.woff2') format('woff2'),
+        url('SomarRounded-Regular.woff') format('woff'),
+        url('SomarRounded-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-Light.eot');
+    src: local('Somar Rounded Light'), local('SomarRounded-Light'),
+        url('SomarRounded-Light.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-Light.woff2') format('woff2'),
+        url('SomarRounded-Light.woff') format('woff'),
+        url('SomarRounded-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-ThinItalic.eot');
+    src: local('Somar Rounded Thin Italic'), local('SomarRounded-ThinItalic'),
+        url('SomarRounded-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-ThinItalic.woff2') format('woff2'),
+        url('SomarRounded-ThinItalic.woff') format('woff'),
+        url('SomarRounded-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Somar Rounded';
+    src: url('SomarRounded-LightItalic.eot');
+    src: local('Somar Rounded Light Italic'), local('SomarRounded-LightItalic'),
+        url('SomarRounded-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('SomarRounded-LightItalic.woff2') format('woff2'),
+        url('SomarRounded-LightItalic.woff') format('woff'),
+        url('SomarRounded-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+

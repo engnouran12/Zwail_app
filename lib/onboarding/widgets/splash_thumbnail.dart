@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/config/assets.dart';
 
@@ -9,23 +9,29 @@ class SplashThumbnail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: TweenAnimationBuilder<double>(
-            tween: Tween(begin: 0.5, end: 1.0),
-            duration: const Duration(seconds: 2),
-            onEnd: onEnd,
-            child: Container(
-              width: 200.h,
-              height: 200.h,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                image: AssetImage(AppAssets.logoImage),
-              )),
-            ),
-            builder: (context, value, child) {
-              return Transform.scale(
-                scale: value * 1.2,
-                child: child,
-              );
-            }));
+        child: Padding(
+      padding: EdgeInsets.symmetric(horizontal: 40.h),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            AppAssets.logo,
+            height: 150.h,
+          ),
+          SizedBox(
+            height: 50.h,
+          ),
+          TweenAnimationBuilder<double>(
+              tween: Tween(begin: 0.0, end: 1.0),
+              duration: const Duration(seconds: 1),
+              onEnd: onEnd,
+              builder: (context, value, child) {
+                return LinearProgressIndicator(
+                  value: value,
+                );
+              }),
+        ],
+      ),
+    ));
   }
 }

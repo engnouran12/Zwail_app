@@ -4,18 +4,12 @@ class AppAssets {
   /// Images
 
   static const userDefaultPhoto = 'assets/images/user_default_photo.jpeg';
-  static const logoImage = 'assets/images/logo.png';
-  static const onboardingProductImage = 'assets/images/Product pic.png';
-  static const colorDots = 'assets/images/color_dots.png';
-  static const ramadanBanner = 'assets/images/ramadan_banner.png';
-  static const banner = 'assets/images/banner.png';
+
+  static const String logo = 'assets/images/logo.png';
 
   /// icons
   static const ordersBoxIcon = 'assets/icons/orders_box_icon.png';
   static const homeIcon = 'assets/icons/home_icon.png';
-  static const searchIcon = 'assets/images/search.png';
-  static const badgeIcon = 'assets/images/badge.png';
-  static const sarbIcon = 'assets/images/sarb.png';
 
   /// lottie
   static const driverLoading = 'assets/lottie/driver_loading.json';
@@ -32,4 +26,7 @@ class AppAssets {
   static const emptyWishList = 'assets/lottie/empty_wishList.json';
 
   /// svg
+  static const notificationsIcon = 'assets/svg/notification_icon.svg';
+  static const searchIcon = 'assets/svg/search_icon.svg';
+  static const filtersIcon = 'assets/svg/filter_icon.svg';
 }

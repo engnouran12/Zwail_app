@@ -153,35 +153,32 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             textInputAction: TextInputAction.next,
             validator: widget.validator,
             obscureText: obscureText,
-            style: widget.style ?? CustomTextStyle.styleW400S16black,
+            style: widget.style ?? CustomTextStyle.styleW400S16Black,
             decoration: InputDecoration(
               isDense: true,
               filled: widget.filled,
               fillColor: widget.fillColor,
               prefixIcon: widget.prefix,
               prefixIconConstraints: BoxConstraints(minWidth: 15.w),
-              suffixIcon:
-                  widget.password
-                      ? SizedBox(
-                        child: InkWell(
-                          onTap:
-                              () => setState(() {
-                                obscureText = !obscureText;
-                              }),
-                          child:
-                              obscureText
-                                  ? Icon(Icons.visibility_off_outlined)
-                                  : Icon(
-                                    Icons.remove_red_eye_outlined,
-                                    color: Colors.grey,
-                                  ),
-                        ),
-                      )
-                      : widget.suffixIcon != null
+              suffixIcon: widget.password
+                  ? SizedBox(
+                      child: InkWell(
+                        onTap: () => setState(() {
+                          obscureText = !obscureText;
+                        }),
+                        child: obscureText
+                            ? Icon(Icons.visibility_off_outlined)
+                            : Icon(
+                                Icons.remove_red_eye_outlined,
+                                color: Colors.grey,
+                              ),
+                      ),
+                    )
+                  : widget.suffixIcon != null
                       ? InkWell(
-                        onTap: widget.suffixIconTap,
-                        child: widget.suffixIcon,
-                      )
+                          onTap: widget.suffixIconTap,
+                          child: widget.suffixIcon,
+                        )
                       : null,
               suffix: widget.suffix,
               contentPadding: EdgeInsets.symmetric(
@@ -189,14 +186,13 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                 horizontal: 10.w,
               ),
               labelText: widget.labelText,
-              labelStyle: CustomTextStyle.styleW400S16black.copyWith(
+              labelStyle: CustomTextStyle.styleW400S16Black.copyWith(
                 color: widget.labelColor ?? Colors.black,
                 fontSize: 15.sp,
               ),
               hintText: widget.hintText,
-              hintStyle:
-                  widget.hintStyle ??
-                  CustomTextStyle.styleW400S16black.copyWith(
+              hintStyle: widget.hintStyle ??
+                  CustomTextStyle.styleW400S16Black.copyWith(
                     color: Colors.grey,
                     fontSize: 14.sp,
                   ),
@@ -209,14 +205,13 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                 ),
               ),
               //   errorMaxLines: 3,
-              errorStyle: CustomTextStyle.styleW400S16black.copyWith(
+              errorStyle: CustomTextStyle.styleW400S16Black.copyWith(
                 color: Colors.red,
                 fontSize: 10.sp,
               ),
               focusedBorder: formBorder().copyWith(
                 borderSide: BorderSide(
-                  color:
-                      widget.borderColor ??
+                  color: widget.borderColor ??
                       Theme.of(context).colorScheme.primary,
                 ),
               ),
