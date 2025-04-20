@@ -7,6 +7,9 @@ import 'package:zewail/core/common/presentation/locale/notifier/locale_notifier.
 import 'package:zewail/core/config/themes.dart';
 import 'package:zewail/core/extensions/localization_extensions.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:zewail/features/auth/presentation/cubit/auth_cubit.dart';
+import 'package:zewail/features/course/presentation/courses_list/cubit/courses_cubit.dart';
+import 'package:zewail/features/course/presentation/widgets/course_card.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -23,6 +26,8 @@ class MyApp extends StatelessWidget {
         return MultiBlocProvider(
           providers: [
             BlocProvider(create: (context) => getIt<LocaleCubit>()),
+            BlocProvider(create: (context) => getIt<AuthCubit>()..getUser()),
+            BlocProvider(create: (context) => getIt<CoursesCubit>()),
           ],
           child: BlocBuilder<LocaleCubit, Locale>(
             builder: (context, state) {

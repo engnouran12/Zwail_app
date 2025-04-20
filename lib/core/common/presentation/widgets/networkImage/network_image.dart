@@ -64,11 +64,11 @@ class CustomImageWidget extends StatelessWidget {
     return SizedBox(
       width: width,
       height: height,
-      child: const Center(
+      child: Center(
         child: Icon(
           Icons.broken_image,
           color: Colors.grey,
-          size: 50,
+          size: height,
         ),
       ),
     );

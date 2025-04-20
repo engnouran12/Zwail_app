@@ -1,5 +1,5 @@
 class AppConstants {
-  static const String baseUrl = 'https://www.moazpharma.com/api/v2/';
+  static const String baseUrl = 'https://api.zewailacademy.com/api/';
 
   static const int itemsPerPage = 10;
 

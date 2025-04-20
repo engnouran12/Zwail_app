@@ -1,18 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zewail/main_layer/view/all_courses_list.dart';
+
+import 'package:zewail/features/course/presentation/categories/cubit/categories_cubit.dart';
+import 'package:zewail/features/course/presentation/courses_list/cubit/courses_cubit.dart';
+import 'package:zewail/features/course/presentation/courses_list/views/courses_horizontal_list_view.dart';
 import 'package:zewail/main_layer/view/categories_list.dart';
-import 'package:zewail/main_layer/view/courses_horizontal_list.dart';
 import 'package:zewail/main_layer/view/home_header.dart';
 import 'package:zewail/main_layer/view/last_video_played.dart';
 
-class MainLayerPage extends StatelessWidget {
+class MainLayerPage extends StatefulWidget {
   const MainLayerPage({super.key});
+
+  @override
+  State<MainLayerPage> createState() => _MainLayerPageState();
+}
+
+class _MainLayerPageState extends State<MainLayerPage> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    context.read<CoursesCubit>().getAllCourses();
+    context.read<CoursesCubit>().getCommonCourses();
+    context.read<CategoriesCubit>().getAllCategories();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: HomeHeader(),
+      appBar: PreferredSize(
+          preferredSize: Size.fromHeight(kToolbarHeight), child: HomeHeader()),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
         child: SingleChildScrollView(
@@ -21,13 +39,30 @@ class MainLayerPage extends StatelessWidget {
             children: [
               LastVideoPlayed(),
               CategoriesList(),
-              CoursesHorizontalList(
-                title: 'اشهر الدورات',
-              ),
-              CoursesHorizontalList(
-                title: 'دورات التصميم',
-              ),
-              AllCoursesList()
+              BlocBuilder<CoursesCubit, CoursesState>(
+                builder: (context, state) {
+                  if (state is ContentLoading) {
+                    return Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  } else {
+                    return Column(
+                      spacing: 24.h,
+                      children: [
+                        CoursesHorizontalList(
+                          title: 'اشهر الدورات',
+                          courses: context.watch<CoursesCubit>().commonCourses,
+                        ),
+                        CoursesHorizontalList(
+                          title: 'كل الدورات',
+                          courses: context.watch<CoursesCubit>().courses,
+                        ),
+                        // AllCoursesList()
+                      ],
+                    );
+                  }
+                },
+              )
             ],
           ),
         ),

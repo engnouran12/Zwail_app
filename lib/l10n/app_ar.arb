@@ -21,7 +21,8 @@
   "location": "الموقع",
   "enterNewPassword": "اكتب كلمه مرور جديده",
   "confirm": "تأكيد",
-  
+  "pleaseCheckYourAccount": "برجاء مراجعه حسابك",
+
   "backToLogin": "العوده لتسجيل الدخول",
   "goToLoginPage": "تقدر تروح لصفحه تسجيل الدخول علشان تسحل دخول \nفي التطبيق و تستمع بكل المزايا",
   "dontWorryEmailWillBeSent": "لا تقلق سيتم ارسال رساله لبريدك الاكتروني",

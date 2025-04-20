@@ -24,7 +24,6 @@ class LocaleCubit extends Cubit<Locale> {
   }
 
   Future<void> changeLocale(String? localeName) async {
-    debugPrint('xxxx->${localeName}');
     await _preferencesRepository.insertValueByKey(
         AppConstants.localeKey, localeName);
     emit(Locale(localeName ?? defaultLanguageCode));

@@ -21,7 +21,7 @@ class AppAssets {
   static const cross = 'assets/lottie/error.json';
   static const scan = 'assets/lottie/scan.json';
   static const addressForm = 'assets/lottie/address_form.json';
-  static const galaxy = 'assets/lottie/galaxy.json';
+  static const passwordChanged = 'assets/lottie/password_changed.json';
   static const emptyCart = 'assets/lottie/empty_cart.json';
   static const emptyWishList = 'assets/lottie/empty_wishList.json';
 
@@ -29,4 +29,5 @@ class AppAssets {
   static const notificationsIcon = 'assets/svg/notification_icon.svg';
   static const searchIcon = 'assets/svg/search_icon.svg';
   static const filtersIcon = 'assets/svg/filter_icon.svg';
+  static const searchSecIcon = 'assets/svg/search_sec_icon.svg';
 }

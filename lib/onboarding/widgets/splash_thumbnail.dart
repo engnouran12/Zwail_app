@@ -23,7 +23,7 @@ class SplashThumbnail extends StatelessWidget {
           ),
           TweenAnimationBuilder<double>(
               tween: Tween(begin: 0.0, end: 1.0),
-              duration: const Duration(seconds: 1),
+              duration: Duration(seconds: 2),
               onEnd: onEnd,
               builder: (context, value, child) {
                 return LinearProgressIndicator(

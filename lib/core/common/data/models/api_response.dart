@@ -1,15 +1,13 @@
-// ignore_for_file: invalid_annotation_target
-
 class ApiResponse<T> {
   final T? data;
   final String? message;
-  final int? code;
+  final int? status;
   final bool? result;
 
   ApiResponse({
-    required this.data,
+    this.data,
     required this.message,
-    required this.code,
+    required this.status,
     required this.result,
   });
 
@@ -26,7 +24,7 @@ class ApiResponse<T> {
                     (value, element) => '$value,$element',
                   )
                 : null,
-        code: json['code'] as int?,
+        status: json['status'] as int?,
         result: json['result'] as bool?);
   }
 
@@ -34,7 +32,7 @@ class ApiResponse<T> {
     return {
       'data': data != null ? toJsonT(data as T) : null,
       'message': message,
-      'code': code,
+      'status': status,
     };
   }
 }
