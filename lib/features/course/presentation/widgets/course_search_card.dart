@@ -13,8 +13,8 @@ class CourseSearchCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      // onTap: () =>
-      //     context.pushNamed(Routes.courseDetailsPage, extra: courseModel.id),
+      onTap: () =>
+          context.pushNamed(Routes.courseDetailsPage, extra: courseModel.id),
       child: Card(
         child: Row(
           spacing: 10.w,

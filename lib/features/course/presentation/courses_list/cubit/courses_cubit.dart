@@ -25,7 +25,10 @@ class CoursesCubit extends Cubit<CoursesState> {
     var response =
         await _getCoursesUsecase(CoursesParametersModel(mostPopular: true));
     response.fold(
-      (l) => SnackBarHelper.showErrorSnackBar(message: l.message ?? ''),
+      (l) {
+        emit(ContentLoadingFailure(failure: l));
+        SnackBarHelper.showErrorSnackBar(message: l.message ?? '');
+      },
       (r) {
         print('XXXX->${r.length}');
         commonCourses = r;
@@ -39,7 +42,10 @@ class CoursesCubit extends Cubit<CoursesState> {
 
     var response = await _getCoursesUsecase(allCoursesParameters);
     response.fold(
-      (l) => SnackBarHelper.showErrorSnackBar(message: l.message ?? ''),
+      (l) {
+        emit(ContentLoadingFailure(failure: l));
+        SnackBarHelper.showErrorSnackBar(message: l.message ?? '');
+      },
       (r) {
         print('XXXX->${r.length}');
         courses = r;
@@ -48,13 +54,16 @@ class CoursesCubit extends Cubit<CoursesState> {
     );
   }
 
-  getAllCoursesFiltered() async {
+  getAllCoursesFiltered({bool? mostPopular}) async {
+    print('XXXXX${mostPopular}');
+    allCoursesParameters =
+        allCoursesParameters.copyWith(mostPopular: mostPopular);
     emit(GetAllCoursesLoading());
 
     var response = await _getCoursesUsecase(allCoursesParameters);
     response.fold(
       (l) {
-        emit(GetCommonCoursesFailure(failure: l));
+        emit(GetAllCoursesFailure(failure: l));
       },
       (r) {
         print('XXXX->${r.length}');
@@ -62,5 +71,11 @@ class CoursesCubit extends Cubit<CoursesState> {
         emit(GetAllCoursesSuccess());
       },
     );
+  }
+
+  resetParameters() {
+    print('XXXXXX');
+    allCoursesParameters = CoursesParametersModel();
+    emit(ResetParametersSuccess());
   }
 }

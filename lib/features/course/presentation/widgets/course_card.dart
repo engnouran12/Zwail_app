@@ -14,10 +14,10 @@ class CourseCard extends StatelessWidget {
   final CourseModel courseModel;
   @override
   Widget build(BuildContext context) {
+    print('XXXX${courseModel.instructors}');
     return InkWell(
-      // onTap: () =>
-      //     context.pushNamed(Routes.courseDetailsPage, extra: courseModel.id),
-
+      onTap: () =>
+          context.pushNamed(Routes.courseDetailsPage, extra: courseModel.id),
       child: SizedBox(
         height: height,
         width: width,
@@ -62,7 +62,9 @@ class CourseCard extends StatelessWidget {
                           width: 5.w,
                         ),
                         Text(
-                          'مصطفي الحسيني',
+                          (courseModel.instructors ?? []).isNotEmpty
+                              ? courseModel.instructors!.first
+                              : '',
                           style: CustomTextStyle.styleW400S10White,
                         ),
                         Spacer(),

@@ -174,9 +174,14 @@ final router = GoRouter(
     GoRoute(
       path: Routes.coursesListPage,
       name: Routes.coursesListPage,
-      pageBuilder: (BuildContext context, GoRouterState state) =>
-          MaterialPage<void>(
-              key: state.pageKey, child: const CoursesListPAge()),
+      pageBuilder: (BuildContext context, GoRouterState state) {
+        bool? mostPopular = state.extra as bool?;
+        return MaterialPage<void>(
+            key: state.pageKey,
+            child: CoursesListPAge(
+              mostPopular: mostPopular,
+            ));
+      },
     ),
     GoRoute(
       path: Routes.searchPage,

@@ -22,7 +22,7 @@ class CoursesListView extends StatelessWidget {
       itemBuilder: (context, index) =>
           CourseCard(height: 148.h, courseModel: courses[index]),
       separatorBuilder: (BuildContext context, int index) => SizedBox(
-        height: 20.h,
+        height: 15.h,
       ),
     );
   }

@@ -8,9 +8,10 @@ import 'package:zewail/main_layer/widgets/list_title_widget.dart';
 
 class CoursesHorizontalList extends StatelessWidget {
   const CoursesHorizontalList(
-      {super.key, required this.title, required this.courses});
+      {super.key, required this.title, required this.courses, this.onPressed});
   final String title;
   final List<CourseModel> courses;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return courses.isEmpty
@@ -24,8 +25,9 @@ class CoursesHorizontalList extends StatelessWidget {
                 children: [
                   ListTitleWidget(title: title),
                   TextButton(
-                      onPressed: () => //TODO:edit
-                          context.pushNamed(Routes.coursesListPage),
+                      onPressed: onPressed ??
+                          () => //TODO:edit
+                              context.pushNamed(Routes.coursesListPage),
                       child: Text('عرض الكل')) //TODO:localization
                 ],
               ),

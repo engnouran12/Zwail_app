@@ -20,6 +20,7 @@ class CourseRepositoryImpl implements CourseRepository {
       var response = await _courseRemoteDataSource.getAllCategories();
       return right(response);
     } catch (e) {
+      print('XXERROR:-->${e}');
       return left(ErrorHandler.handleError(e));
     }
   }
@@ -30,6 +31,7 @@ class CourseRepositoryImpl implements CourseRepository {
       var response = await _courseRemoteDataSource.getCategoryDetails(id);
       return right(response);
     } catch (e) {
+      print('XXERROR:-->${e}');
       return left(ErrorHandler.handleError(e));
     }
   }
@@ -42,6 +44,7 @@ class CourseRepositoryImpl implements CourseRepository {
           await _courseRemoteDataSource.getCoursesFiltered(parameters);
       return right(response);
     } catch (e) {
+      print('XXERROR:-->${e}');
       return left(ErrorHandler.handleError(e));
     }
   }
@@ -52,6 +55,7 @@ class CourseRepositoryImpl implements CourseRepository {
       var response = await _courseRemoteDataSource.getCourseDetails(id);
       return right(response);
     } catch (e) {
+      print('XXERROR:-->${e}');
       return left(ErrorHandler.handleError(e));
     }
   }

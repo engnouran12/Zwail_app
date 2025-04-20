@@ -9,7 +9,6 @@ import 'package:zewail/core/extensions/localization_extensions.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:zewail/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:zewail/features/course/presentation/courses_list/cubit/courses_cubit.dart';
-import 'package:zewail/features/course/presentation/widgets/course_card.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

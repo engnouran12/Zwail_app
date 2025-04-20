@@ -1,8 +1,3 @@
-/*
-data_search=2024-08-01&category_id=2&most_popular=1
-
- */
-
 class CoursesParametersModel {
   final String? dataSearch;
   final String? categoryId;

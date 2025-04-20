@@ -8,8 +8,8 @@ class CourseModel {
   int minutes;
   int weeks;
   String? type;
-  String? price;
-  List<dynamic>? instructors;
+  double? price;
+  List<String>? instructors;
 
   CourseModel(
       {this.id,

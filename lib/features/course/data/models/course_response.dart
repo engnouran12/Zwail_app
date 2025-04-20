@@ -43,10 +43,12 @@ class CourseResponse extends CourseModel {
       type = json["type"];
     }
     if (json["price"] is String) {
-      price = json["price"];
+      price = double.parse(json["price"]);
     }
     if (json["instructors"] is List) {
-      instructors = json["instructors"] ?? [];
+      print('XXXXinstructors${json["instructors"]}');
+      instructors =
+          List<String>.from(json["instructors"]?.cast<String>() ?? []);
     }
   }
 

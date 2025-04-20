@@ -30,4 +30,8 @@ class AppAssets {
   static const searchIcon = 'assets/svg/search_icon.svg';
   static const filtersIcon = 'assets/svg/filter_icon.svg';
   static const searchSecIcon = 'assets/svg/search_sec_icon.svg';
+  static const participants = 'assets/svg/participants.svg';
+  static const quizIcon = 'assets/svg/quiz_icon.svg';
+  static const unitsIcon = 'assets/svg/units_icon.svg';
+  static const bookIcon = 'assets/svg/book.svg';
 }

@@ -64,7 +64,6 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
 
   @override
   Future<UserResponse> signup(UserModel user) async {
-    print('XX->${user.name}');
     String platform = Platform.isAndroid ? "Android" : "Ios";
     user.platform = platform;
     user.registrationMethod = platform;
