@@ -134,6 +134,22 @@
     "save": "Save",
     "myAddress": "My Address",
     "address": "Address",
+    "categoryNAme": "Sections",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   "@title": {
     "description": "Mora whats"
   },    
@@ -173,4 +189,7 @@
                   }
                 }
               }
+
+
+
 }
