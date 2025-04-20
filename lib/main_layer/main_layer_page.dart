@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:zewail/core/config/routes.dart';
+import 'package:zewail/core/extensions/localization_extensions.dart';
 
 import 'package:zewail/features/course/presentation/categories/cubit/categories_cubit.dart';
 import 'package:zewail/features/course/presentation/courses_list/cubit/courses_cubit.dart';
@@ -41,39 +42,32 @@ class _MainLayerPageState extends State<MainLayerPage> {
             children: [
               LastVideoPlayed(),
               CategoriesList(),
-
-
-
-
-
-
-
-              // BlocBuilder<CoursesCubit, CoursesState>(
-              //   builder: (context, state) {
-              //     if (state is ContentLoading) {
-              //       return Center(
-              //         child: CircularProgressIndicator(),
-              //       );
-              //     } else {
-              //       return Column(
-              //         spacing: 24.h,
-              //         children: [
-              //           CoursesHorizontalList(
-              //             title: 'اشهر الدورات',
-              //             courses: context.watch<CoursesCubit>().commonCourses,
-              //             onPressed: () => context
-              //                 .pushNamed(Routes.coursesListPage, extra: true),
-              //           ),
-              //           CoursesHorizontalList(
-              //             title: 'كل الدورات',
-              //             courses: context.watch<CoursesCubit>().courses,
-              //           ),
-              //           // AllCoursesList()
-              //         ],
-              //       );
-              //     }
-              //   },
-              // )
+              BlocBuilder<CoursesCubit, CoursesState>(
+                builder: (context, state) {
+                  if (state is ContentLoading) {
+                    return Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  } else {
+                    return Column(
+                      spacing: 24.h,
+                      children: [
+                        CoursesHorizontalList(
+                          title:  context.localization.mostCources,
+                          courses: context.watch<CoursesCubit>().commonCourses,
+                          onPressed: () => context
+                              .pushNamed(Routes.coursesListPage, extra: true),
+                        ),
+                        CoursesHorizontalList(
+                          title: context.localization.allCources,
+                          courses: context.watch<CoursesCubit>().courses,
+                        ),
+                        // AllCoursesList()
+                      ],
+                    );
+                  }
+                },
+              )
             ],
           ),
         ),

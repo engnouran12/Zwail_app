@@ -134,6 +134,23 @@
     "save": "Save",
     "myAddress": "My Address",
     "address": "Address",
+    "categoryNAme": "Sections",
+
+   "mostCources": "Most popular courses",
+   "allCources": "All Courses",
+
+
+
+
+
+
+
+
+
+
+
+
+
   "@title": {
     "description": "Mora whats"
   },    
@@ -173,4 +190,7 @@
                   }
                 }
               }
+
+
+
 }
