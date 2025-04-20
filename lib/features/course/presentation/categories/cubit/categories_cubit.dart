@@ -18,6 +18,7 @@ class CategoriesCubit extends Cubit<CategoriesState> {
   final GetCategoryDetailsUsecase _getCategoryDetailsUsecase =
       getIt<GetCategoryDetailsUsecase>();
   List<CategoryModel>? categories;
+
   getAllCategories() async {
     emit(GetCategoryLoading());
     var response = await _getAllCategoriesUsecase();

@@ -34,7 +34,7 @@ class CategoriesList extends StatelessWidget {
                     ListTitleWidget(title: 'الاقسام'), //TODO:localization,
 
                     SizedBox(
-                      height: 160.h,
+                      height: 180,
                       child: GridView.builder(
                           scrollDirection: Axis.horizontal,
                           gridDelegate:
@@ -65,6 +65,7 @@ class CategoriesList extends StatelessWidget {
                                   Expanded(
                                     child: Text(
                                       category.name ?? '',
+                                      maxLines: 2,
                                       style: CustomTextStyle.styleW500S12Black,
                                       textAlign: TextAlign.center,
                                       overflow: TextOverflow.ellipsis,
