@@ -43,40 +43,32 @@ class _MainLayerPageState extends State<MainLayerPage> {
               CategoriesList(),
 
 
-
-
-
-
-
-
-
-
-              // BlocBuilder<CoursesCubit, CoursesState>(
-              //   builder: (context, state) {
-              //     if (state is ContentLoading) {
-              //       return Center(
-              //         child: CircularProgressIndicator(),
-              //       );
-              //     } else {
-              //       return Column(
-              //         spacing: 24.h,
-              //         children: [
-              //           CoursesHorizontalList(
-              //             title: 'اشهر الدورات',
-              //             courses: context.watch<CoursesCubit>().commonCourses,
-              //             onPressed: () => context
-              //                 .pushNamed(Routes.coursesListPage, extra: true),
-              //           ),
-              //           CoursesHorizontalList(
-              //             title: 'كل الدورات',
-              //             courses: context.watch<CoursesCubit>().courses,
-              //           ),
-              //           // AllCoursesList()
-              //         ],
-              //       );
-              //     }
-              //   },
-              // )
+              BlocBuilder<CoursesCubit, CoursesState>(
+                builder: (context, state) {
+                  if (state is ContentLoading) {
+                    return Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  } else {
+                    return Column(
+                      spacing: 24.h,
+                      children: [
+                        CoursesHorizontalList(
+                          title: 'اشهر الدورات',
+                          courses: context.watch<CoursesCubit>().commonCourses,
+                          onPressed: () => context
+                              .pushNamed(Routes.coursesListPage, extra: true),
+                        ),
+                        CoursesHorizontalList(
+                          title: 'كل الدورات',
+                          courses: context.watch<CoursesCubit>().courses,
+                        ),
+                        // AllCoursesList()
+                      ],
+                    );
+                  }
+                },
+              )
             ],
           ),
         ),
