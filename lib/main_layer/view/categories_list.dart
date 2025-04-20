@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:zewail/core/common/presentation/widgets/networkImage/network_image.dart';
 import 'package:zewail/core/config/colors.dart';
+import 'package:zewail/core/config/routes.dart';
 import 'package:zewail/core/config/text_styles.dart';
 import 'package:zewail/core/extensions/localization_extensions.dart';
 import 'package:zewail/features/course/domain/entities/category_model.dart';
@@ -50,32 +52,37 @@ class CategoriesList extends StatelessWidget {
                       children: divideCategoryList(
                               context.watch<CategoriesCubit>().categories, 1)
                           .map(
-                            (item) => SizedBox(
-                              width: 90.w,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  CircleAvatar(
-                                    radius: 22.r,
-                                    backgroundColor: AppColors.mainColor
-                                        .withValues(alpha: .1),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(10.0),
-                                      child: CustomImageWidget(
-                                        imagePath: item.image ?? '',
-                                        height: 20.h,
+                            (item) => GestureDetector(
+                              onTap: () => context.pushNamed(
+                                  Routes.categoryDetailsPage,
+                                  extra: item.id),
+                              child: SizedBox(
+                                width: 90.w,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 22.r,
+                                      backgroundColor: AppColors.mainColor
+                                          .withValues(alpha: .1),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: CustomImageWidget(
+                                          imagePath: item.image ?? '',
+                                          height: 20.h,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  SizedBox(height: 6.h),
-                                  Text(
-                                    item.name ?? '',
-                                    maxLines: 2,
-                                    style: CustomTextStyle.styleW500S12Black,
-                                    textAlign: TextAlign.center,
-                                    overflow: TextOverflow.ellipsis,
-                                  )
-                                ],
+                                    SizedBox(height: 6.h),
+                                    Text(
+                                      item.name ?? '',
+                                      maxLines: 2,
+                                      style: CustomTextStyle.styleW500S12Black,
+                                      textAlign: TextAlign.center,
+                                      overflow: TextOverflow.ellipsis,
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           )
@@ -87,31 +94,36 @@ class CategoriesList extends StatelessWidget {
                       children: divideCategoryList(
                               context.watch<CategoriesCubit>().categories, 2)
                           .map(
-                            (item) => SizedBox(
-                              width: 90.w,
-                              child: Column(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 22.r,
-                                    backgroundColor: AppColors.mainColor
-                                        .withValues(alpha: .1),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(10.0),
-                                      child: CustomImageWidget(
-                                        imagePath: item.image ?? '',
-                                        height: 20.h,
+                            (item) => GestureDetector(
+                              onTap: () => context.pushNamed(
+                                  Routes.categoryDetailsPage,
+                                  extra: item.id),
+                              child: SizedBox(
+                                width: 90.w,
+                                child: Column(
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 22.r,
+                                      backgroundColor: AppColors.mainColor
+                                          .withValues(alpha: .1),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: CustomImageWidget(
+                                          imagePath: item.image ?? '',
+                                          height: 20.h,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  SizedBox(height: 6.h),
-                                  Text(
-                                    item.name ?? '',
-                                    maxLines: 2,
-                                    style: CustomTextStyle.styleW500S12Black,
-                                    textAlign: TextAlign.center,
-                                    overflow: TextOverflow.ellipsis,
-                                  )
-                                ],
+                                    SizedBox(height: 6.h),
+                                    Text(
+                                      item.name ?? '',
+                                      maxLines: 2,
+                                      style: CustomTextStyle.styleW500S12Black,
+                                      textAlign: TextAlign.center,
+                                      overflow: TextOverflow.ellipsis,
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           )
