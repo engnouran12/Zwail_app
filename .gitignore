@@ -43,3 +43,14 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Sensitive Configs and API Endpoints
+.env
+.env.*
+*.env
+lib/core/network/endpoints.dart
+lib/core/config/constants.dart
+*_secrets.dart
+*.key
+*.pem
+secrets.json
